@@ -14,7 +14,7 @@ namespace giaminh
 {
     public partial class DuAn : Form
     {
-        SqlConnection ketnoi = new SqlConnection(@"Data Source=DESKTOP-2VP3D1S\SQLEXPRESS;Initial Catalog=QLDA;Integrated Security=True");
+        SqlConnection ketnoi = new SqlConnection(@"Data Source=DESKTOP-2VP3D1S\SQLEXPRESS;Initial Catalog=dbQLCDACNTT;Integrated Security=True");
         public DuAn()
         {
             InitializeComponent();
@@ -58,19 +58,38 @@ namespace giaminh
 
         private void btnxem_Click(object sender, EventArgs e)
         {
-            
+            load();
         }
 
         public void load() {
             ketnoi.Open();
-            string sqlSELECT = "select * from QLDA";
-            SqlCommand k = new SqlCommand(sqlSELECT, ketnoi);
-            SqlDataReader lgm = k.ExecuteReader();
+            string sqlSELECT = "select * from QuanLyDuAn";
+            SqlCommand m = new SqlCommand(sqlSELECT, ketnoi);
+            SqlDataReader lgm = m.ExecuteReader();
             DataTable dt = new DataTable();
             dt.Load(lgm);
             dsQLDA.DataSource = dt;
+            ketnoi.Close();
             dsQLDA.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
             dsQLDA.AutoSizeRowsMode = (DataGridViewAutoSizeRowsMode)DataGridViewAutoSizeRowsMode.AllCells;
+        }
+
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            String tenDA = txtTenDA.Text.Trim();
+            String maDA = txtMaDA.Text.Trim();
+            String noiTrienKhai = txtNoiTK.Text.Trim();
+            String loaiDA = txtLoaiDA.Text.Trim();
+            DateTime dateBatDau = dateBD.Value;
+            DateTime dateKetThuc = dateKT.Value;
+            float kp = float.Parse(txtKP.Text.Trim());
+
+            ketnoi.Open();
+            String query = "Insert into QuanLyDuAn (tenDA, maDA, ngayBD, ngayKT, kinhphiDA, loaiDA, noiTrienKhai) VALUES (" + tenDA + ", " + maDA + "," + dateBatDau + "," + dateKetThuc + "," + kp + "," + loaiDA + "," + noiTrienKhai + ")";
+            SqlCommand m = new SqlCommand(query, ketnoi);
+            m.ExecuteNonQuery();
+            ketnoi.Close();
+            load();
         }
     }
 }

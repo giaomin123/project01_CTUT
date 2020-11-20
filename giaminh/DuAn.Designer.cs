@@ -36,13 +36,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.dsQLDA = new System.Windows.Forms.DataGridView();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLoaiDA = new System.Windows.Forms.TextBox();
+            this.txtKP = new System.Windows.Forms.TextBox();
+            this.txtNoiTK = new System.Windows.Forms.TextBox();
+            this.txtMaDA = new System.Windows.Forms.TextBox();
+            this.txtTenDA = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -108,6 +106,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
+            this.dateBD = new System.Windows.Forms.DateTimePicker();
+            this.dateKT = new System.Windows.Forms.DateTimePicker();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dsQLDA)).BeginInit();
@@ -144,18 +144,18 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.dateKT);
+            this.tabPage1.Controls.Add(this.dateBD);
             this.tabPage1.Controls.Add(this.btnxem);
             this.tabPage1.Controls.Add(this.button3);
             this.tabPage1.Controls.Add(this.button2);
             this.tabPage1.Controls.Add(this.btnThem);
             this.tabPage1.Controls.Add(this.dsQLDA);
-            this.tabPage1.Controls.Add(this.textBox7);
-            this.tabPage1.Controls.Add(this.textBox6);
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.txtLoaiDA);
+            this.tabPage1.Controls.Add(this.txtKP);
+            this.tabPage1.Controls.Add(this.txtNoiTK);
+            this.tabPage1.Controls.Add(this.txtMaDA);
+            this.tabPage1.Controls.Add(this.txtTenDA);
             this.tabPage1.Controls.Add(this.label8);
             this.tabPage1.Controls.Add(this.label7);
             this.tabPage1.Controls.Add(this.label5);
@@ -209,64 +209,54 @@
             this.btnThem.TabIndex = 15;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // dsQLDA
             // 
+            this.dsQLDA.AllowUserToAddRows = false;
+            this.dsQLDA.AllowUserToDeleteRows = false;
             this.dsQLDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dsQLDA.Location = new System.Drawing.Point(6, 213);
             this.dsQLDA.Name = "dsQLDA";
+            this.dsQLDA.ReadOnly = true;
             this.dsQLDA.Size = new System.Drawing.Size(845, 150);
             this.dsQLDA.TabIndex = 14;
             this.dsQLDA.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dsQLDA_CellContentClick);
             // 
-            // textBox7
+            // txtLoaiDA
             // 
-            this.textBox7.Location = new System.Drawing.Point(141, 128);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(199, 23);
-            this.textBox7.TabIndex = 13;
+            this.txtLoaiDA.Location = new System.Drawing.Point(141, 128);
+            this.txtLoaiDA.Name = "txtLoaiDA";
+            this.txtLoaiDA.Size = new System.Drawing.Size(199, 23);
+            this.txtLoaiDA.TabIndex = 13;
             // 
-            // textBox6
+            // txtKP
             // 
-            this.textBox6.Location = new System.Drawing.Point(611, 92);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(195, 23);
-            this.textBox6.TabIndex = 12;
+            this.txtKP.Location = new System.Drawing.Point(611, 92);
+            this.txtKP.Name = "txtKP";
+            this.txtKP.Size = new System.Drawing.Size(200, 23);
+            this.txtKP.TabIndex = 12;
             // 
-            // textBox5
+            // txtNoiTK
             // 
-            this.textBox5.Location = new System.Drawing.Point(611, 61);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(195, 23);
-            this.textBox5.TabIndex = 11;
+            this.txtNoiTK.Location = new System.Drawing.Point(141, 92);
+            this.txtNoiTK.Name = "txtNoiTK";
+            this.txtNoiTK.Size = new System.Drawing.Size(199, 23);
+            this.txtNoiTK.TabIndex = 9;
             // 
-            // textBox4
+            // txtMaDA
             // 
-            this.textBox4.Location = new System.Drawing.Point(611, 26);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(195, 23);
-            this.textBox4.TabIndex = 10;
+            this.txtMaDA.Location = new System.Drawing.Point(141, 61);
+            this.txtMaDA.Name = "txtMaDA";
+            this.txtMaDA.Size = new System.Drawing.Size(199, 23);
+            this.txtMaDA.TabIndex = 8;
             // 
-            // textBox3
+            // txtTenDA
             // 
-            this.textBox3.Location = new System.Drawing.Point(141, 92);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(199, 23);
-            this.textBox3.TabIndex = 9;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(141, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(199, 23);
-            this.textBox2.TabIndex = 8;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(141, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(199, 23);
-            this.textBox1.TabIndex = 7;
+            this.txtTenDA.Location = new System.Drawing.Point(141, 29);
+            this.txtTenDA.Name = "txtTenDA";
+            this.txtTenDA.Size = new System.Drawing.Size(199, 23);
+            this.txtTenDA.TabIndex = 7;
             // 
             // label8
             // 
@@ -884,6 +874,22 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Họ tên:";
             // 
+            // dateBD
+            // 
+            this.dateBD.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateBD.Location = new System.Drawing.Point(611, 29);
+            this.dateBD.Name = "dateBD";
+            this.dateBD.Size = new System.Drawing.Size(200, 23);
+            this.dateBD.TabIndex = 19;
+            // 
+            // dateKT
+            // 
+            this.dateKT.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateKT.Location = new System.Drawing.Point(611, 63);
+            this.dateKT.Name = "dateKT";
+            this.dateKT.Size = new System.Drawing.Size(200, 23);
+            this.dateKT.TabIndex = 20;
+            // 
             // DuAn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -915,13 +921,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLoaiDA;
+        private System.Windows.Forms.TextBox txtKP;
+        private System.Windows.Forms.TextBox txtNoiTK;
+        private System.Windows.Forms.TextBox txtMaDA;
+        private System.Windows.Forms.TextBox txtTenDA;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
@@ -992,5 +996,7 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.DateTimePicker dateKT;
+        private System.Windows.Forms.DateTimePicker dateBD;
     }
 }
