@@ -1,0 +1,17 @@
+D:\winform\giaminh\giaminh\obj\Debug\giaminh.csprojAssemblyReference.cache
+D:\winform\giaminh\giaminh\obj\Debug\giaminh.Form1.resources
+D:\winform\giaminh\giaminh\obj\Debug\giaminh.Form2.resources
+D:\winform\giaminh\giaminh\obj\Debug\giaminh.Properties.Resources.resources
+D:\winform\giaminh\giaminh\obj\Debug\giaminh.csproj.GenerateResource.cache
+D:\winform\giaminh\giaminh\obj\Debug\giaminh.csproj.CoreCompileInputs.cache
+D:\winform do an 1\giaminh\giaminh\bin\Debug\giaminh.exe.config
+D:\winform do an 1\giaminh\giaminh\bin\Debug\giaminh.exe
+D:\winform do an 1\giaminh\giaminh\bin\Debug\giaminh.pdb
+D:\winform do an 1\giaminh\giaminh\obj\Debug\giaminh.csprojAssemblyReference.cache
+D:\winform do an 1\giaminh\giaminh\obj\Debug\giaminh.DangNhap.resources
+D:\winform do an 1\giaminh\giaminh\obj\Debug\giaminh.DuAn.resources
+D:\winform do an 1\giaminh\giaminh\obj\Debug\giaminh.Properties.Resources.resources
+D:\winform do an 1\giaminh\giaminh\obj\Debug\giaminh.csproj.GenerateResource.cache
+D:\winform do an 1\giaminh\giaminh\obj\Debug\giaminh.csproj.CoreCompileInputs.cache
+D:\winform do an 1\giaminh\giaminh\obj\Debug\giaminh.exe
+D:\winform do an 1\giaminh\giaminh\obj\Debug\giaminh.pdb
